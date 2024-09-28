@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: vocalp2p
+
+  websocket:
+    enabled: true
+
+server:
+  port: 8080
+
