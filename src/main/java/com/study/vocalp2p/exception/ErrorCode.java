@@ -35,7 +35,7 @@ public enum ErrorCode {
     /**
      * 1대1 통화방 에러
      */
-    ROOM_NOT_FOUND(HttpStatus.NOT_FOUND, "해당 room id로 방을 찾을 수 없습니다."),
+    ROOM_NOT_FOUND(HttpStatus.BAD_REQUEST, "해당 room id로 방을 찾을 수 없습니다."),
 
     /**
      * 일반 오류 코드
