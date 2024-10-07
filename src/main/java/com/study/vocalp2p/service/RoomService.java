@@ -48,4 +48,15 @@ public class RoomService {
     public void deleteRoom(String roomId){
         roomRepository.deleteById(roomId);
     }
+
+    public Room joinRoom(String roomId, String calleeEmail){
+        Room room = roomRepository.findByRoomId(roomId)
+                .orElseThrow(()->new BaseException(ErrorCode.ROOM_NOT_FOUND));
+        Room updatedRoom = room.toBuilder()
+                .calleeEmail(calleeEmail)
+                .status(RoomStatus.INCALL.getLabel())
+                .updatedAt(new Date())
+                .build();
+        return roomRepository.save(updatedRoom);
+    }
 }
