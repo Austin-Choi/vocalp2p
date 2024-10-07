@@ -7,6 +7,9 @@ spring:
       uri: mongodb://localhost:27017/calldb  # MongoDB 연결 설정
       database: calldb
 
-socketio:
+socket:
+  # ifconfig | grep inet 해보기
+  #localhost -> 192.168.0.108, docker -> 0.0.0.0
+  host: 192.168.0.108
   port: 9092
-  hostname: localhost
+  origin: http://localhost:3000
