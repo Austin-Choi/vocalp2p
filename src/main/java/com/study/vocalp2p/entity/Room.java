@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-@Document(collation = "rooms")
+@Document(collation = "ko")
 @Getter
 @Builder(toBuilder = true)
 @NoArgsConstructor
