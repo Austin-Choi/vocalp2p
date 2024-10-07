@@ -2,6 +2,7 @@ package com.study.vocalp2p.repository;
 
 import com.study.vocalp2p.entity.Room;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 
 import java.util.Optional;
 
