@@ -63,7 +63,6 @@ public class GlobalExceptionHandler {
                 .body(new ErrorResponse(ErrorCode.INTERNAL_SERVER_ERROR));
     }
 
-    // TODO UnAuthorized
     @ExceptionHandler(HttpClientErrorException.Unauthorized.class)
     protected ResponseEntity<ErrorResponse> handleUnauthorizedExceptioin(
             final HttpClientErrorException.Unauthorized e) {
